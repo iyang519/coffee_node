@@ -1,0 +1,742 @@
+body{
+	font-family: AvenirRoman,HelveticaNeue-Light,Helvetica Neue,arial,Hiragino Sans GB,冬青黑体，Microsoft YaHei New,Microsoft YaHei,微软雅黑，宋体，SimSun,STXihei,华文细黑，sans-serif;
+	font-weight: 400;
+}
+
+body{
+	font-size: 16px;
+	line-height: 1.8;
+	color: #707070;
+	background-color: #fff;
+}
+
+div{
+	display: block;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+/*  字体设置*/
+small{
+	color: #aa8e64;
+	letter-spacing: 3px;
+	font-size: 13px;
+}
+h3{
+	font-weight: 300;
+	font-size: 28.8px;
+	color: #525252;
+	line-height: 1.44;
+	margin-bottom: 1em;
+}
+p{
+	font-size: 1.125em;
+}
+/* 布局*/
+/* 1.导航*/
+nav{
+	padding-top: 20px;
+}
+
+/* 2.首页图片*/
+.image img{
+	width: 100%;
+	max-width: 100%;
+}
+
+/* 3.分隔div*/
+.divider-whitespace{
+	height: 100px;
+}
+
+/* 4.商品说明*/
+article{
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.container-fluid .split-text{
+	padding:50px;
+}
+
+/* 4.1 字体样式 覆盖*/
+.container-fluid .text-center h3{
+	color: #000;	
+	font-size: 40px;
+	margin-bottom: 16px;
+}
+.container-fluid .text-center p{
+	color: #000;
+	margin-bottom: 14px;
+}
+
+/* 5.button 样式*/
+.container-fluid .text-center .buttons{
+	margin: 30px 0;
+}
+.btn-secondary{
+	background-color: #aa8e64;
+	color: white;
+	letter-spacing: 1px;
+	border-radius: 0;
+	font-weight: 700;
+	padding:14px 24px 13px;
+	margin: 8px;
+}
+.btn-secondary:hover{
+	background-color: #9e8157;
+	color: white;
+}
+
+.header-image{
+	background-color: #f0f0f0;
+	padding: 60px 0 30px;
+}
+
+/* 6.block图片样式*/
+.block-img-row .images{
+	padding-left: 0;
+	padding-right: 0;
+	width: 25%;
+	float: left;
+}
+.block-img-row .images img{
+	width: 100%;
+	max-width: 100%;
+}
+.block-img-row{
+	overflow: auto;
+}
+
+/* 7.footer 样式*/
+footer{
+	background-color: #292929;
+	padding: 40px;
+}
+footer p{
+	font-size:10px;
+	color: #a3a3a3;
+	letter-spacing: 0;
+}
+
+/* 用户登录注册样式*/
+#identifier{
+	width: 600px;
+}
+#identifier #log-in,#register{
+	width: 600px;
+	padding-left: 36px;
+	padding-right: 36px;
+	font-size: 13px;
+}
+#identifier .form-control{
+	line-height: 2.5;
+	height: 45px;
+}
+#identifier .btn{
+	height: 45px;
+	line-height: 2.5;
+}
+
+#identifier li a{
+	width: 298px;
+	padding: 20px;
+}
+#identifier .content{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+/* 1.导航*/
+nav{
+	padding-top: 20px;
+}
+
+/* 副标题字体样式*/
+.subheader h3{
+	
+	line-height: 1.44;
+	letter-spacing: 4px;
+}
+.subheader h3:after{
+	content: '';
+	display: block;
+	border-top: 1px solid #ddd;
+	margin-top: 1.5em;
+	width: 4em;
+
+	margin-right: auto;
+	margin-left: auto; 
+}
+
+/* 3.分隔div*/
+.divider-whitespace{
+	height: 50px;
+}
+
+/* Header样式*/
+.header-container{
+	position: relative;
+}
+.header-height{
+	min-height: 50vh;
+	padding-top: 20vh;
+	padding-bottom: 20vh;
+}
+.header-image{
+	background-color: #292929;
+	background-size: cover;
+	background-position: center center;
+}
+header.header-img{
+	background-image: url(../imgs/coffee/main-bar.jpg);
+}
+header.opacity-medium:before{
+	content: '';
+	z-index: 1;
+	background:rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.header-text{
+	z-index: 2;
+}
+.header-text h3{
+	color: white;
+}
+
+/* 轮播样式*/
+.mySlide{
+	height: 350px;
+	overflow: hidden;
+	margin-left: 5px;
+	float:left;
+}
+
+.mySlide img{
+	width: 280px;
+	height: 280px;
+}
+
+/* 轮播修改样式*/
+/* 1.分页pager的样式*/
+.bx-wrapper .bx-pager.bx-default-pager a{
+	background: #8f8f8f;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active{
+	background: #ae9061;
+}
+.bx-wrapper .bx-pager{
+	bottom: -60px;
+}
+/* 2.前后导航的按钮*/
+.bx-wrapper .bx-controls-direction a{
+	z-index: -9999;
+}
+/* 3.去掉轮播框架的边框*/
+.bx-wrapper .bx-viewport{
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+/* 1.导航*/
+nav{
+	padding-top: 20px;
+}
+
+/* 3.分隔div*/
+.divider-whitespace{
+	height: 50px;
+}
+
+/* Header样式*/
+.header-container{
+	position: relative;
+}
+.header-height{
+	min-height: 60vh;
+	padding-top: 25vh;
+	padding-bottom: 20vh;
+}
+.header-image{
+	background-color: #292929;
+	background-size: cover;
+	background-position: center center;
+}
+header.header-img{
+	background-image: url(imgs/bbs/drinking-coffee.jpg);
+}
+header.opacity-medium:before{
+	content: '';
+	z-index: 1;
+	background:rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.header-text{
+	z-index: 2;
+}
+.header-text h3{
+	color: white;
+}
+
+/* 副标题字体样式*/
+.subheader h3,.subheader1 h3{
+	font-size: 28px;
+	line-height: 1.44;
+	letter-spacing: 4px;
+}
+.subheader h3:after,.subheader1 h3:after{
+	content: '';
+	display: block;
+	border-top: 1px solid #ddd;
+	margin-top: 1.5em;
+	width: 6em;
+}
+.subheader ul{
+	font-size: 1.125em;
+}
+div.subheader:after{
+	content: '';
+	display: block;
+	border-top: 1px solid #ddd;
+	margin-top: 1.5em;
+
+}
+.subheader1 form{
+	position: relative;
+}
+.subheader1 label{
+	position: absolute;
+	left: 15px;
+	top: 7px;
+	color: #aaa;
+	font-size: 13px;
+	font-weight: 300;
+	cursor: text;
+	pointer-events: none;
+}
+
+/* 5.button 样式*/
+.btn-secondary{
+	background-color: #aa8e64;
+	color: white;
+	letter-spacing: 1px;
+	border-radius: 0;
+	font-weight: 700;
+	padding:10px 24px 8px;
+	margin: 8px;
+
+	position: absolute;
+	right: 8px;
+
+}
+.btn-secondary:hover{
+	background-color: #9e8157;
+	color: white;
+}
+
+/* 1.导航*/
+nav{
+	padding-top: 20px;
+}
+
+/* 2.字体样式*/
+h3{
+	font-size: 40px;
+	line-height: 1.44;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+p{
+	font-size: 1em;
+}
+
+/* 3.表格样式*/
+table{
+	table-layout: fixed;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+tr.thead{
+	height: 50px;
+}
+tr{
+	height: 80px;
+}
+th{
+	text-align: center;
+	font-size: 13px;
+}
+td{
+	font-size: 15px;
+}
+tr:nth-child(2n+1){
+	background-color: #f9f9f9;
+}
+table tr.thead{
+	background-color: #ededed;
+}
+
+/* 3.分隔div*/
+.divider-whitespace{
+	height: 100px;
+}
+
+/* 7.footer 样式*/
+footer{
+	background-color: #292929;
+	padding: 40px;
+}
+footer p{
+	font-size:10px;
+	color: #a3a3a3;
+	letter-spacing: 0;
+}
+
+/* 用户登录注册样式*/
+#identifier{
+	width: 600px;
+}
+#identifier #log-in,#register{
+	width: 600px;
+	padding-left: 36px;
+	padding-right: 36px;
+	font-size: 13px;
+}
+#identifier .form-control{
+	line-height: 2.5;
+	height: 45px;
+}
+#identifier .btn{
+	height: 45px;
+	line-height: 2.5;
+}
+
+#identifier li a{
+	width: 298px;
+	padding: 20px;
+}
+#identifier .content{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/* 1.导航*/
+		nav{
+			padding-top: 20px;
+		}
+
+
+		/* 3.分隔div*/
+		.divider-whitespace{
+			height: 50px;
+		}
+
+		/* Header样式*/
+		.header-container{
+			position: relative;
+		}
+		.header-height{
+			min-height: 60vh;
+			padding-top: 25vh;
+			padding-bottom: 20vh;
+		}
+		.header-image{
+			background-color: #292929;
+			background-size: cover;
+			background-position: center center;
+		}
+		header.header-img{
+			background-image: url(../../imgs/picture/tell-story.jpg);
+		}
+		header.opacity-medium:before{
+			content: '';
+			z-index: 1;
+			background:rgba(0,0,0,0.5);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		
+		.header-text{
+			z-index: 2;
+		}
+		.header-text h3{
+			color: white;
+		}
+
+		/*内容图片样式*/
+		.split-image img{
+			border-radius: 50%;
+		}
+
+		/*内容文字 样式*/
+		.split-text{
+			padding-top: 45px;
+			padding-bottom: 45px;
+			font-size: 14px;
+		}
+
+		/*鼠标悬挂样式*/
+		.split-image img:hover{
+			cursor: pointer;
+		}
+		.split-text p:hover{
+			cursor: pointer;
+			color: #a3a3a3;
+		}
+
+		/*内容背景颜色*/
+		.container-img{
+			background-color: #f0f0f0;
+			padding: 50px;
+		}
+
+		/* 上传照片样式*/
+		.subheader1 h3{
+			font-size: 28px;
+			line-height: 1.44;
+			letter-spacing: 4px;
+		}
+		.subheader1 h3:after{
+			content: '';
+			display: block;
+			border-top: 1px solid #ddd;
+			margin-top: 1.5em;
+			width: 6em;
+		}
+		.subheader1 form{
+			position: relative;
+		}
+		.subheader1 label{
+			position: absolute;
+			left: 15px;
+			top: 7px;
+			color: #aaa;
+			font-size: 13px;
+			font-weight: 300;
+			cursor: text;
+			pointer-events: none;
+		}
+
+		/* 5.button 样式*/
+		.btn-secondary{
+			background-color: #aa8e64;
+			color: white;
+			letter-spacing: 1px;
+			border-radius: 0;
+			font-weight: 700;
+			padding:10px 24px 8px;
+			margin: 8px;
+
+			position: absolute;
+			right: 8px;
+
+		}
+		.btn-secondary:hover{
+			background-color: #9e8157;
+			color: white;
+		}
+
+		/* 图片上传样式*/
+		.ipic-pic{
+			height: 170px;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		#dropbox{
+			border: 3px dashed #ccc;
+			color: #ccc;
+			font-size: 40px;
+			height: 150px;
+			line-height: 150px;
+		}
+		.ipic-prev{
+			height: auto;
+			border-top: #fff;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			padding: 8px 12px;
+		}
+		#preview{
+			line-height: 102px;
+		}
+		#preview #p{
+			text-align: center;
+		}
+		#preview #p p{
+			font-size: 40px;
+			color: #ccc;
+		}
+		
+		/* 7.footer 样式*/
+		footer{
+			background-color: #292929;
+			padding: 40px;
+		}
+		footer p{
+			font-size:10px;
+			color: #a3a3a3;
+			letter-spacing: 0;
+		}
+
+		/* 用户登录注册样式*/
+		#identifier{
+			width: 600px;
+		}
+		#identifier #log-in,#register{
+			width: 600px;
+			padding-left: 36px;
+			padding-right: 36px;
+			font-size: 13px;
+		}
+		#identifier .form-control{
+			line-height: 2.5;
+			height: 45px;
+		}
+		#identifier .btn{
+			height: 45px;
+			line-height: 2.5;
+		}
+
+		#identifier li a{
+			width: 298px;
+			padding: 20px;
+		}
+		#identifier .content{
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+
+/* 1.导航*/
+		nav{
+			padding-top: 20px;
+		}
+
+
+		/* 3.分隔div*/
+		.divider-whitespace{
+			height: 80px;
+		}
+
+		/* Header样式*/
+		.header-container{
+			position: relative;
+		}
+		.header-height{
+			min-height: 60vh;
+			padding-top: 25vh;
+			padding-bottom: 20vh;
+		}
+		.header-image{
+			background-color: #292929;
+			background-size: cover;
+			background-position: center center;
+		}
+		header.header-img{
+			background-image: url(../../imgs/beverage/beverage-shot-1.jpg);
+		}
+		
+		.header-text h3{
+			color: white;
+		}
+
+		/* 副标题字体样式*/
+		.subheader h3{
+			font-size: 22px;
+			line-height: 1.44;
+			letter-spacing: 4px;
+		}
+		.subheader h3:after{
+			content: '';
+			display: block;
+			border-top: 1px solid #ddd;
+			margin-top: 1.5em;
+			width: 6em;
+
+			margin-right: auto;
+			margin-left: auto; 
+		}
+
+		/*内容图片样式*/
+		.split-image img{
+			border-radius: 50%;
+		}
+
+		/*内容文字样式*/
+		.split-text h3{
+			margin-top: 30px;
+			margin-bottom: 20px;
+			font-size: 24px;
+		}
+		.split-text p{
+			font-size: 15px;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+
+		/*鼠标悬挂样式*/
+		.split-image img:hover{
+			cursor: pointer;
+		}
+		.split-text p:hover{
+			cursor: pointer;
+			color: #a3a3a3;
+		}
+
+		/* 7.footer 样式*/
+		footer{
+			background-color: #292929;
+			padding: 40px;
+		}
+		footer p{
+			font-size:10px;
+			color: #a3a3a3;
+			letter-spacing: 0;
+		}
+
+		/* 用户登录注册样式*/
+		#identifier{
+			width: 600px;
+		}
+		#identifier #log-in,#register{
+			width: 600px;
+			padding-left: 36px;
+			padding-right: 36px;
+			font-size: 13px;
+		}
+		#identifier .form-control{
+			line-height: 2.5;
+			height: 45px;
+		}
+		#identifier .btn{
+			height: 45px;
+			line-height: 2.5;
+		}
+
+		#identifier li a{
+			width: 298px;
+			padding: 20px;
+		}
+		#identifier .content{
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+
+
+

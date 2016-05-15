@@ -1,0 +1,110 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑";
+}
+input:-webkit-autofill { 
+-webkit-box-shadow: 0 0 0px 1000px white inset; 
+border: 1px solid #CCC!important; 
+} 
+ 
+.wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../imgs/index/home-bg.jpg") no-repeat;
+}
+.top {
+  height: 40px;
+  line-height: 40px;
+  padding: 10px 0;
+  position: relative;
+  background: rgba(255, 255, 255, 0.4);
+}
+.top h1 {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+}
+.top a {
+  position: absolute;
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  top: 15px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 1em;
+  background: #2D59A2;
+  color: #fff;
+  text-decoration: none;
+}
+.top .login {
+  right: 100px;
+}
+.top .register {
+  right: 20px;
+}
+form {
+  width: 380px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 0 auto;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+form p{position: relative;}
+form h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  padding: 0;
+  height: 40px;
+  width: 100%;
+  display: inline-block;
+  line-height: 40px;
+}
+form input {
+  border: none;
+  padding: 12px;
+  width: 318px;
+  height: 20px;
+  padding-left: 50px;
+  line-height: 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+form button {
+  width: 380px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 12px;
+  background: #2D59A2;
+  border: none;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 22px;
+  font-family: "微软雅黑";
+}
+form p {
+  position: relative;
+}
+.inputImg{position: absolute;left:10px;top:30px;}
+/*.email {
+  background: rgba(255, 255, 255, 0.5) url("../img/email.png") no-repeat 10px center;
+}
+.password {
+  background: rgba(255, 255, 255, 0.5) url("../img/password.png") no-repeat 10px center;
+}*/
+
+

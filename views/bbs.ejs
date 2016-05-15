@@ -1,0 +1,98 @@
+<% include header.ejs %>
+	<div class="header-container">
+		<header class="header-height header-image header-img opacity-medium">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 text-center header-text">
+						<small>我们的使命 </small>
+						<h3>每人每杯 每个社区</h3>
+						<h3 id="user"><%= name %></h3>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<div class="container">
+		<div class="divider-whitespace"></div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 subheader">
+				<h3>我们的价值观</h3>
+				<p>以我们的伙伴、咖啡和顾客为核心，我们努力践行以下价值观：</p>
+				<ul>
+					<li>营造一种温暖而有归属感的文化，欣然接纳和欢迎每一个人。</li>
+					<li>积极行动，勇于挑战现状，打破陈规，以创新方式实现公司与伙伴的共同成长。</li>
+					<li>在每个连接彼此的当下，我们专注投入，开诚相见，互尊互敬。</li>
+					<li>对于每件事，我们都竭尽所能，做到最好，敢于担当。</li>
+				</ul>
+			</div>
+		</div>
+		<div class="divider-whitespace"></div>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 subheader1">
+				<h3>在这里留言</h3>
+				<form>
+					<div class="form-group">
+						<label id="isay-label" for="isay-content" style="display:block">留下您的建议...</label>
+						<textarea class="form-control" rows="3" id="isay-content"></textarea>
+					</div>
+					<button type="submit" class="btn btn-secondary" id="submit">发布</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<div class="divider-whitespace"></div>
+	<div class="divider-whitespace"></div>
+
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<p>© 2016 Starbucks Corporation.
+						<br>
+						All rights reserved. 沪ICP备09020061号
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+
+		$(function(){
+			$('#isay-content').click(function(e){
+				$('#isay-label').css('display','none');
+				e.stopPropagation(); //阻止冒泡到body
+			});
+			$('body').click(function(){
+				$('#isay-label').css('display','block');
+			});
+		});
+
+	</script>
+	<script>
+		$('#submit').on('click', function(e) {
+			e.preventDefault();
+
+			var data = {
+			  user:$("#user").html(),
+			  comment: $('#isay-content').val()
+			}
+
+			if (!data.comment) {
+			  alert('你输入的信息不完整！');
+			  return;
+			}
+
+			$.post("/bbs", data, function(data) {
+			   alert(data.msg);
+			   $("#isay-content").val('');
+			});
+
+		})
+	</script>
+</body>
+</html>

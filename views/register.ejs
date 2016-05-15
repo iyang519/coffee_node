@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>欢迎来到咖啡屋</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+  <script src="js/jquery-1.8.1.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <form method="post">
+    <h2>欢迎来到咖啡屋</h2>
+    <p>
+      <img src="imgs/email.png" class="inputImg"/>
+      <input type="text" class="email" placeholder="输入用户名" id="username" name = "account"/>
+    </p>
+
+    <p>
+      <img src="imgs/email.png" class="inputImg"/>
+      <input type="text" class="email" placeholder="qq号" id="qq" name = "qq"/>
+    </p>
+    <p>
+      <img src="imgs/email.png" class="inputImg"/>
+      <input type="text" class="email" placeholder="个性签名" id="sign" name = "sign"/>
+    </p>
+    <p>
+      <img src="imgs/password.png" class="inputImg"/>
+      <input type="password" class="password" placeholder="输入密码" id="password" name="password"/>
+    </p>
+    <p><button type="submit" id="submit">注册</button></p>
+    <p style="text-align: right;margin-top: 10px;"><a href="http://localhost:3000/login" style="color: #2D59A2;font-size: 20px;">登录</a></p>
+  </form>
+
+
+</div>
+<script>
+
+     $('#submit').on('click', function(e) {
+          e.preventDefault();
+
+          var data = {
+              account: $('input[name="account"]').val(),
+              password: $('input[name="password"]').val(),
+              qq:$('input[name="qq"]').val(),
+              sign:$('input[name="sign"]').val()
+          }
+
+          if (!(data.account && data.password && data.qq && data.sign)) {
+              alert('你输入的信息不完整！');
+              return;
+          }
+
+          $.post("/register", data, function(data) {
+              console.log(data);
+              switch (data.code) {
+                  case '200':
+                      alert(data.msg);
+                      var url = "http://localhost:3000/login";
+                      window.location.assign(url)
+                      break;
+                  case '500':
+                      alert(data.msg);
+                      break;
+                  default:
+                      alert(data.msg);
+              }
+          });
+
+      })
+
+</script>
+  
+</body>
+</html>
+
+

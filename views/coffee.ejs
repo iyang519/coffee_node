@@ -1,0 +1,78 @@
+<% include header.ejs %>
+	<div class="header-container">
+		<header class="header-height header-image header-img opacity-medium">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 text-center header-text">
+						<small>代表我们高品质的</small>
+						<h3>甄选咖啡</h3>
+						<h3 style="font-size:18px;padding-left:250px;padding-right:250px">我们走访世界各地搜罗品质出众的咖啡豆，当中只有少量珍贵而独特风味的品种，才会被冠以臻选™的称号。 它们不可多得，且拥有让人着迷的风味。这些臻选™咖啡豆只在指定门店限量供应。</h3>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<div class="divider-whitespace"></div>
+
+	<div class="container">
+		<div class="divider-whitespace"></div>
+		<div class="row">
+			<div class="col-md-12 text-center subheader">
+				<small>咖啡经典</small>
+				<h3>咖啡师的最爱</h3>
+				<p>回溯多年历史，星巴克的技巧纯熟的咖啡师一直用心制作星巴克的经典与饮品。</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="divider-whitespace"></div>
+
+	<div class="container">
+		<div class="mySlide">
+			<ul class="bxslide">
+				<% for(var i=0; i<data.length; i++) {%>
+					<li><img src=<%= data[i].imgUrl %> ></li>
+				<% } %>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="divider-whitespace"></div>
+	<div class="divider-whitespace"></div>
+
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<p>© 2016 Starbucks Corporation.
+						<br>
+						All rights reserved. 沪ICP备09020061号
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('.bxslide').bxSlider({
+	        minSlides: 4,
+	        maxSlides: 4,
+	        moveSlides:4,
+	        slideWidth: 280,
+	        slideMargin: 20,
+	        
+		});
+
+		$('.modal-trigger').click(function(){
+			$('#myModal').modal();
+		});
+	});
+
+	</script>
+</body>
+</html>

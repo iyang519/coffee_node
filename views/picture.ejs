@@ -1,0 +1,145 @@
+<% include header.ejs %>
+	<div class="header-container">
+		<header class="header-height header-image header-img opacity-medium">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 text-center header-text">
+						<small>说出你的故事</small>
+						<h3>一张照片 一个故事</h3>
+						<h3 id="username"><%= data.username %></h3>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<div class="container-img">
+		<div class="container">
+
+				
+			<% for(var i=0; i<data.length; i++) {%>
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-2 split-image">
+						<center>
+							<img src=<%= data[i].imageUrl %> class="img-responsive"/>
+						</center>
+					</div>
+					<div class="col-sm-6 split-text">
+						<p id="p<%= i+1 %>" class="p"><%= data[i].title %></p>
+					</div>	
+					
+				</div>
+				<div class="row div<%= i+1 %>" style="display:none">
+					<div class="divider-whitespace"></div>
+					<div class="col-sm-offset-2 col-sm-8">
+						<p><%= data[i].info %></p>
+						<p style="color:#23527c">用户id：<%= data[i].user %></p>
+						<p style="color:#23527c">个性签名：<%= data[i].sign %></p>
+
+
+					</div>
+				</div>
+
+				<div class="divider-whitespace"></div>
+					
+
+			<% } %>
+			<div class="divider-whitespace"></div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 subheader1">
+					<h3>说出你的故事</h3>
+
+
+					<form method="post" enctype="multipart/form-data" >
+						<div class="isay form-group">
+							<input type="text" value=<%= data.username %> name="user"/>
+						</div>
+						<div class="isay form-group">
+							<textarea class="form-control" rows="3" placeholder="标题" name="title"></textarea>
+						</div>
+						<div class="isay form-group">
+							<textarea class="form-control" rows="3" placeholder="内容" name="info"></textarea>
+						</div>
+						<div class="isay form-group">
+							<textarea class="form-control" rows="3" placeholder="个性签名" name="sign"></textarea>
+						</div>
+						<div class="ipic form-group">
+							<div class="ipic-pic form-control text-center">
+								<!--<div id="dropbox">拖拽上传</div>-->
+								<input type="file" id="postImg" name="imgUrl" multiple="multiple"/>
+							</div>
+							
+						</div>
+						
+						<button type="submit" class="btn btn-secondary" id="submit">发布</button>
+					</form>
+				</div>
+			</div>
+			<div class="divider-whitespace"></div>
+			<div class="divider-whitespace"></div>
+
+		</div>
+	</div>
+
+	
+
+
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<p>© 2016 Starbucks Corporation.
+						<br>
+						All rights reserved. 沪ICP备09020061号
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		 /*$('#submit').on('click', function(e) {
+	          e.preventDefault();
+	          var data = {
+	              username: $('input[name="username"]').val(),
+	              info: $('textarea[name="info"]').val(),
+	              imgUrl:$('input[name="imgUrl"]').val()
+	          }
+	          $.post("/picture", data, function(data) {
+	              console.log(data);
+	             
+	          });
+
+	      })*/
+
+
+	</script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('.img-responsive').each(function(){//遍历所有.img-responsive元素
+				$(this).click(function(){//为每个Img元素添加点击事件
+					var id = this.id.replace('img','');
+					$('.div' + id).toggle();
+				});
+			});
+			$('.p').each(function(){//遍历所有.p元素
+				$(this).click(function(){//为每个Img元素添加点击事件
+					var id = this.id.replace('p','');
+					$('.div' + id).toggle();
+				});
+			});
+			$('#isay-content').click(function(e){
+				$('#isay-label').css('display','none');
+				e.stopPropagation(); 
+			});
+			$('body').click(function(){
+				$('#isay-label').css('display','block');
+			});
+		});
+
+		
+	</script>
+
+</body>
+</html>

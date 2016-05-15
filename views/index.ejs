@@ -1,0 +1,96 @@
+<!--<% include header.ejs %>
+  <div class="image">
+    <img src="imgs/index/home-bg.jpg">
+  </div>
+  
+  <div class="divider-whitespace"></div>
+
+  <div class="container-fluid">
+
+    
+    <article class="row">
+        <% for(var i=0; i<data.length; i++) {%>
+            
+          <% if (!(i%2)) { %>
+            <section class="col-sm-5 col-sm-push-1 col-xs-12 split-text">
+              <small>当季新品</small>
+              <h3><%= data[i].title %></h3>
+              <p><%= data[i].info %></p>
+            </section>
+            <section class="col-sm-5 col-sm-push-1 col-xs-12 split-image">
+              <center>
+                <img src=<%= data[i].imgUrl %> >
+              </center>
+            </section>
+
+
+
+          <% } else { %>
+            <section class="col-sm-5 col-xs-12 col-sm-push-6 split-text">
+              <small>当季新品</small>
+              <h3><%= data[i].title %></h3>
+              <p><%= data[i].info %></p>
+            </section>
+            <section class="col-sm-5 col-xs-12 col-sm-pull-4 split-image">
+              <center>
+                <img src=<%= data[i].imgUrl %> >
+              </center>
+            </section>
+
+          <% } %>
+
+        <% } %>
+    </article>
+    
+  </div>
+
+  <div class="divider-whitespace"></div>
+
+  <header class="header-image">
+    <div class="container-fluid">
+      <article class="row">
+        <section class="col-sm-push-3 col-sm-6 text-center">
+          <small>当季新品</small>
+          <h3>美食创新 限店供应</h3>
+          <p>从甜到咸，你对咖啡配美食的体验将被刷新升级。
+            <br>我们的创新，来自你对咖啡对美食的不断追求。
+          </p>
+          <p class="buttons">
+            <a href="http://localhost:3000/beverage" class="btn btn-secondary">在这里购买</a>
+          </p>
+        </section>
+      </article>
+    </div>
+  </header>
+
+  <div class="block-img-row">
+    <div class="images">
+      <img src="imgs/index/bg3.jpg" class="image-group">
+    </div>
+    <div class="images">
+      <img src="imgs/index/bg4.jpg" class="image-group">
+    </div>
+    <div class="images">
+      <img src="imgs/index/bg5.jpg" class="image-group">
+    </div>
+    <div class="images">
+      <img src="imgs/index/bg6.jpg" class="image-group">  
+    </div>
+  </div>
+
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <p>© 2016 Starbucks Corporation.
+            <br>
+            All rights reserved. 沪ICP备09020061号
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
